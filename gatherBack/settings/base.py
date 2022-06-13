@@ -135,6 +135,8 @@ AUTH_USER_MODEL = 'users.User'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+STATIC_HOST = "https://cellar-c2.services.clever-cloud.com" if not DEBUG else ""
+STATIC_URL = STATIC_HOST + "/static/"
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = (
